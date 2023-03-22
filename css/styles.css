@@ -1,29 +1,34 @@
-body{
-    min-width: 300px;
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
-
-/* @media (max-width:992px){
-    .container{
-        max-width: 750px;
-    }
+.header {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+    /* width: 100%; */
+    /* background-color: red; */
 }
-@media (max-width:767px){
-    .container{
-        max-width: none;
-    }
-} */
+
+.tool_bar {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
 
 .menu_button {
-    position: absolute;
-    left: 1.67%;
-    right: 97.29%;
-    top: 2.83%;
-    bottom: 95.75%;
+    display: flex;
+    height: 20px;
+    width: 17px;
 }
 
 .youtube_logo {
-    position: absolute;
+    display: flex;
     left: 4.17%;
     right: 89.79%;
     top: 2.5%;
@@ -31,13 +36,11 @@ body{
 }
 
 .search_field {
-    /* background-color: #EBEBEB; */
-    position: absolute;
+    display: flex;
+    margin-left: 60px;
     border: 0px;
-    left: 13.28%;
-    right: 43.49%;
-    top: 1.67%;
-    bottom: 94.67%;
+    width: 600px;
+    height: 27px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
@@ -50,28 +53,19 @@ input[type=text]:focus {
     border: 0px solid #fbfcfb;
 }
 
+
 .icons_top {
-    position: absolute;
-    left: 82.81%;
-    right: 8.07%;
-    top: 2.5%;
-    bottom: 95.42%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
 }
 
-/* .camera_icon {
-    position: absolute;
-    left: 82.81%;
-    right: 15.78%;
-    top: 2.67%;
-    bottom: 95.67%;
+.camera_icon {
+    display: flex;
 }
 
 .services_icon {
-    position: absolute;
-    left: 86.82%;
-    right: 12.08%;
-    top: 2.67%;
-    bottom: 95.58%;
+    display: flex;
 
     background: #000000;
     mix-blend-mode: normal;
@@ -79,35 +73,23 @@ input[type=text]:focus {
 }
 
 .notifications_icon {
-    position: absolute;
-    left: 90.52%;
-    right: 8.33%;
-    top: 2.42%;
-    bottom: 95.42%;
-} */
-
-/* .icon {
-    margin-right: 8%;
-} */
-
-.icons_top a:not(:last-child) {
-    margin-right: 20%;
+    display: flex;
 }
 
 .notifications_icon {
     margin-top: 1px;
 }
 
-.mobile_search_icon{
+.mobile_search_icon {
     display: none;
 }
 
 .userpic {
-    position: absolute;
+    display: flex;
     /* left: 96.27%; */
-    right: 5.65%;
+    /* right: 5.65%;
     top: 1.83%;
-    bottom: 94.83%;
+    bottom: 94.83%; */
 }
 
 
@@ -124,210 +106,88 @@ input[type=text]:focus {
     }
 
     .mobile_search_icon {
-        display: block;
-        position: absolute;
+        display: flex;
+        /* position: absolute;
         left: 72.19%;
         right: 22.12%;
         top: 3.2%;
-        bottom: 96.76%;
+        bottom: 96.76%; */
     }
 
-    .search_field, .menu_button, .icons_top {
+    .search_field,
+    .menu_button,
+    .icons_top {
         display: none;
     }
 }
 
 
-.active_tab {
-color: #FF0000;
+.sidebar {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    width: 189px;
+}
+
+.tab {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 33px;
+    align-items: center;
+    gap: 13px;
+}
+
+.tabs, .subscriptions {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending_tab {
+    gap: 17px;
+}
+
+.subscription_tab, .watch_later_tab{
+    gap: 14.19px;
 }
 
 
-.home_tab_pic {
-    position: absolute;
-    display: inline-block;
-    left: 1.67%;
-    right: 97.29%;
-    top: 9.5%;
-    bottom: 88.92%;
-}
 
 .tab_name {
-    position: absolute;
-    display: inline-block;
-    height: 20px;
-    left: calc(1.67% + 34px);
-    /* adjust the 60px value to the width of your image */
-    top: calc(50% - 8px);
-    /* adjust the 10px value to half the height of your text */
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    margin-top: 131%;
     color: #898989;
 }
 
-.home_tab {
-    position: absolute;
-    left: 1.67%;
-    right: 94.27%;
-    top: 9.5%;
-    bottom: 88.83%;
+.active_tab {
+    color: #FF0000;
 }
 
-.sidebar {
-    position: absolute;
-    left: 1.61%;
-    right: 91.41%;
-    top: 9.5%;
-    bottom: 90.5%;
-}
-
-.trending_tab_pic {
-    position: absolute;
-    left: 1.77%;
-    right: 97.4%;
-    top: 13.5%;
-    bottom: 84.75%;
-}
-
-.trending_tab_name {
-    top: calc(50% - 10px);
-}
-
-.trending_tab {
-    position: absolute;
-    left: 1.77%;
-    right: 93.23%;
-    top: 13.5%;
-    bottom: 84.75%;
-    margin-top: 23%;
-}
-
-.subscription_tab {
-    margin-top: 46%;
-    position: absolute;
-    left: 1.77%;
-    right: 93.23%;
-    top: 13.5%;
-    bottom: 84.75%;
-}
-
-.subscription_tab_name {
-    top: calc(50% - 11px);
-}
-
-.library_tab {
-    margin-top: 80%;
-}
-
-.library_tab_name {
-    top: calc(50% - 12px);
-}
-
-.tab {
-    position: absolute;
-    left: 1.77%; 
-    right: 93.23%;
-    top: 13.5%;
-    bottom: 84.75%;
-}
-
-.history_tab {
-    margin-top: 103%;
-}
-
-.history_tab_name {
-    top: calc(50% - 11px);
-}
-
-.watch_later_tab {
-    margin-top: 125%;
-}
-
-.watch_later_tab_name {
-    width: 976%;
-    top: calc(50% - 11px);
-}
-
-.favourite_tab {
-    margin-top: 148%; 
-}
-
-.favourite_tab_name {
-    top: calc(50% - 11px);
-}
-
-.liked_tab {
-    margin-top: 171%; 
-}
-
-.liked_tab_name {
-    width: 1150%;
-    top: calc(50% - 11px);
-}
-
-.music_tab {
-    margin-top: 194%; 
-}
-
-.music_tab_name {
-    top: calc(50% - 11px);
-}
-
-.games_tab {
-    margin-top: 217%; 
-}
-
-.games_tab_name {
-    top: calc(50% - 11px);
-}
-
-.show_more_tab {
-    margin-top: 240%; 
-}
-
-.show_more_tab_name {
-    width: 1150%;
-    top: calc(50% - 11px);   
-}
-
-.subscriptions_div {
-    position: absolute;
-    left: 1.56%;
-    right: 90.16%;
-    top: 59.33%;
-    bottom: 13.67%;
-    margin-top: 188%;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.users {
-    margin-top: 1340%;
-}
 
 .subscriptions_title {
-    position: absolute;
-    height: 23px;
-    left: 1.56%;
-    right: 92.34%;
-    top: calc(50% - 23px/2 + 123.5px);
-
+    padding-left: 30px;
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 23px;
-
-
-
     color: #000000;
 }
+
+.settings {
+    margin-top: 76px;
+}
+
+/*
+
+.users {
+    margin-top: 1340%;
+}
+
+
 
 .subscription_link {
     position: absolute;
@@ -348,7 +208,7 @@ ul {
 
 .subscription_account_title {
     width: 1150%;
-    top: calc(50% - 11px);   
+    top: calc(50% - 11px);
 }
 
 .subscription_first {
@@ -384,9 +244,7 @@ ul {
     margin-top: 590%;
 }
 
-.setting_link {
-    
-}
+.setting_link {} */
 
 
 
@@ -429,5 +287,3 @@ ul {
     /* identical to box height */
 
 
-    color: #19202C;
-} */
