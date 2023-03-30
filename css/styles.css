@@ -216,7 +216,7 @@ input[type=text]:focus {
 .authors_videos {
     margin-top: 30px;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 40px;
 }
 
