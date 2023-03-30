@@ -305,6 +305,16 @@ input[type=text]:focus {
 
 
 @media only screen and (max-width:1230px) {
+    .container {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .content {
+        height: calc(100% - 125px);
+        overflow: auto;
+    }
+
     .userpic {
         position: absolute;
         left: 85.62%;
@@ -342,6 +352,7 @@ input[type=text]:focus {
 
     .authors_videos {
         flex-direction: column;
+        padding-bottom: 20px;
     }
 
     .feed {
@@ -363,7 +374,7 @@ input[type=text]:focus {
     .video_preview_img {
         width: 288px;
         height: 150px;
-    } 
+    }
 }
 
 /*
