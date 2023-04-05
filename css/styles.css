@@ -4,6 +4,8 @@ body {
     flex-direction: column;
     height: 100vh;
     overflow-x: hidden;
+    font-family: 'Mulish';
+    overflow: hidden;
 }
 
 .header {
@@ -13,8 +15,6 @@ body {
     align-items: center;
     padding: 0 35px;
     margin-top: 12px;
-    /* width: 100%; */
-    /* background-color: red; */
 }
 
 .tool_bar {
@@ -31,10 +31,6 @@ body {
 
 .youtube_logo {
     display: flex;
-    left: 4.17%;
-    right: 89.79%;
-    top: 2.5%;
-    bottom: 95.42%;
 }
 
 .search_field {
@@ -47,7 +43,7 @@ body {
     -moz-border-radius: 20px;
     border-radius: 20px;
     padding-left: 23px;
-    background: #EBEBEB url('../img/Search_icon.png') no-repeat 96% center;
+    background: #fafafa00 url('../img/Search_icon.png') no-repeat 96% center;
 }
 
 input[type=text]:focus {
@@ -68,10 +64,6 @@ input[type=text]:focus {
 
 .services_icon {
     display: flex;
-
-    /* background: #000000;
-    mix-blend-mode: normal;
-    opacity: 0.24; */
 }
 
 .notification_icon {
@@ -87,14 +79,25 @@ input[type=text]:focus {
 }
 
 .notification_oval {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: -8px;
-    left: 7px;
+    top: -4px;
+    left: 10px;
     z-index: 1;
-    background-color: white;
-    /* border: 2px solid red; */
-    border-radius: 50%;
-    height: 20px;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 7px;
+    background-color: #db0b0b;
+}
+
+.notification_count {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    color: #FFFFFF;
 }
 
 .notification_icon_img {
@@ -108,10 +111,6 @@ input[type=text]:focus {
 
 .userpic {
     display: flex;
-    /* left: 96.27%; */
-    /* right: 5.65%;
-    top: 1.83%;
-    bottom: 94.83%; */
 }
 
 
@@ -120,7 +119,11 @@ input[type=text]:focus {
     gap: 30px;
     flex-direction: column;
     width: 189px;
-    margin-top: 30px;
+    padding-top: 30px;
+    min-width: 207px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 89vh;
 }
 
 .mobile_navbar {
@@ -135,11 +138,6 @@ input[type=text]:focus {
     margin-right: auto;
     display: flex;
     gap: 40px;
-}
-
-.mobile_navbar_tab {
-    /* display: flex; */
-    /* flex-direction: column; */
 }
 
 .mobile_navbar_icon {
@@ -176,7 +174,7 @@ input[type=text]:focus {
 
 .subscription_tab,
 .watch_later_tab {
-    gap: 14.19px;
+    gap: 15px;
 }
 
 .tab_name {
@@ -214,9 +212,13 @@ input[type=text]:focus {
 
 .feed {
     display: flex;
-    margin-top: 50px;
+    padding-top: 50px;
     margin-left: 90px;
     width: 100%;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 87vh;
 }
 
 .channel_info {
@@ -229,15 +231,14 @@ input[type=text]:focus {
     justify-content: space-between;
 }
 
-.author_recomendation {
+.author_recommendation {
     width: 100%;
-    height: 255px;
+    height: 285px;
 }
 
 .authors_videos {
     margin-top: 30px;
     display: flex;
-    /* flex-wrap: wrap; */
     gap: 40px;
 }
 
@@ -245,7 +246,8 @@ input[type=text]:focus {
     height: 50px;
 }
 
-.author_video_arrows {
+.author_video_arrows,
+.recommended_arrows {
     padding-right: 118px;
     margin-top: auto;
 }
@@ -254,7 +256,7 @@ input[type=text]:focus {
     width: 250px;
 }
 
-.video_preivew_div {
+.video_preview_div {
     position: relative;
     height: 150px;
     width: 250px;
@@ -265,20 +267,28 @@ input[type=text]:focus {
     position: absolute;
     bottom: 8px;
     right: 10px;
-    background-image: url('../img/duration_layout.png');
     height: 24px;
     width: 47px;
     justify-content: center;
     align-items: center;
 }
 
+.video_duration_layout {
+    position: relative;
+    text-align: center;
+}
+
 .video_duration_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
-    /* identical to box height */
 
     color: #FFFFFF;
 }
@@ -310,7 +320,7 @@ input[type=text]:focus {
     color: #C2C2C2;
 }
 
-.video_previe_bottom {
+.video_preview_bottom {
     margin-top: 4px;
     display: flex;
     justify-content: space-between;
@@ -321,9 +331,127 @@ input[type=text]:focus {
     height: 150px;
 }
 
+.recommended {
+    height: 363px;
+    width: 100%;
+    margin-top: 45px;
+}
 
+.recommended_title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+}
 
+.recommended_header {
+    display: flex;
+    justify-content: space-between;
+}
 
+.recommended_videos {
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+}
+
+.recommended_video {
+    width: 540px;
+}
+
+.recommended_video_preview_div {
+    width: 540px;
+    position: relative;
+}
+
+.recommended_video_preview_img {
+    width: 100%;
+    height: 250px;
+}
+
+.recommended_video_duration {
+    margin-bottom: 10px;
+}
+
+.recommended_channel {
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+.recommended_channel_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recommended_info {
+    display: flex;
+    align-items: center;
+}
+
+.recommended_channel_title {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.info_title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #C2C2C2;
+    margin-left: 19px;
+    margin-top: 8px;
+}
+
+.channel_info {
+    align-items: center;
+}
+
+.recommended_channel_navigation {
+    display: flex;
+}
+
+.subscription_div {
+    display: flex;
+    width: 154px;
+    height: 40px;
+    margin-top: auto;
+    margin-right: 40px;
+    background-color: #FF0000;
+    border-radius: 20px;
+    align-items: center;
+    position: relative;
+}
+
+.subscription_text {
+    margin: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #FFF;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #CBCBCB;
+    outline: 2px solid #FFF;
+    outline-offset: -2px;
+    border: .1px solid #B7B7B7;
+
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #909090;
+}
 
 @media only screen and (max-width:1230px) {
     .container {
@@ -334,14 +462,6 @@ input[type=text]:focus {
     .content {
         height: calc(100% - 125px);
         overflow: auto;
-    }
-
-    .userpic {
-        position: absolute;
-        left: 85.62%;
-        right: 5%;
-        top: 1.83%;
-        bottom: 96.09%;
     }
 
     .mobile_search_icon,
@@ -356,7 +476,7 @@ input[type=text]:focus {
         display: none;
     }
 
-    .sidebar {
+    .sidebar, .recommended {
         display: none;
     }
 
@@ -387,7 +507,7 @@ input[type=text]:focus {
         height: 1px;
     }
 
-    .video_preivew_div,
+    .video_preview_div,
     .video {
         width: 288px;
     }
@@ -397,107 +517,3 @@ input[type=text]:focus {
         height: 150px;
     }
 }
-
-/*
-.users {
-    margin-top: 1340%;
-}
-
-
-
-.subscription_link {
-    position: absolute;
-    left: 1.56%;
-    right: 90.16%;
-    top: 63.75%;
-    bottom: 34.08%;
-    width: 88%;
-}
-
-.subscription_img {
-    position: absolute;
-    left: 1.56%;
-    right: 97.08%;
-    top: 63.75%;
-    bottom: 34.08%;
-}
-
-.subscription_account_title {
-    width: 1150%;
-    top: calc(50% - 11px);
-}
-
-.subscription_first {
-    margin-top: 1410%;
-}
-
-.subscription_second {
-    margin-top: 1750%;
-}
-
-.subscription_third {
-    margin-top: 2090%;
-}
-
-.subscription_fourth {
-    margin-top: 2430%;
-}
-
-.subscription_fifth {
-    margin-top: 2770%;
-}
-
-.subscription_sixth {
-    margin-top: 3110%;
-}
-
-.setting_div {
-    position: absolute;
-    left: 1.77%;
-    right: 93.85%;
-    top: 95%;
-    bottom: 3.33%;
-    margin-top: 590%;
-}
-
-.setting_link {} */
-
-
-
-/* .channel_recomendation {
-    position: absolute;
-    left: 13.28%;
-    right: -1.82%;
-    top: 9.5%;
-    bottom: 67.17%;
-}
-
-.channel_author_preview {
-    position: absolute;
-    left: 13.28%;
-    right: 76.04%;
-    top: 9.5%;
-    bottom: 86.33%;
-}
-
-.channel_pic {
-    position: absolute;
-    left: 13.28%;
-    right: 84.11%;
-    top: 9.5%;
-    bottom: 86.33%;
-}
-
-.channge_author_name {
-    position: absolute;
-    height: 33px;
-    left: 16.93%;
-    right: 76.04%;
-    top: calc(50% - 33px/2 - 460.5px);
-
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 33px;
-    /* identical to box height */
