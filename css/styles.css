@@ -121,9 +121,14 @@ input[type=text]:focus {
     width: 189px;
     padding-top: 30px;
     min-width: 207px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     overflow-x: hidden;
     height: 89vh;
+    overflow-y: hidden;
+}
+
+.sidebar:hover, .feed:hover {
+    overflow-y: auto;
 }
 
 .mobile_navbar {
@@ -216,7 +221,7 @@ input[type=text]:focus {
     margin-left: 90px;
     width: 100%;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     height: 87vh;
 }
