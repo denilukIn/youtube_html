@@ -127,7 +127,8 @@ input[type=text]:focus {
     overflow-y: hidden;
 }
 
-.sidebar:hover, .feed:hover {
+.sidebar:hover,
+.feed:hover {
     overflow-y: auto;
 }
 
@@ -458,6 +459,63 @@ input[type=text]:focus {
     background-color: #909090;
 }
 
+
+.channel_img_div {
+    width: 1595px;
+    height: 280px;
+}
+
+.channel_header_info {
+    display: flex;
+    align-items: center;
+}
+
+.channel_header {
+    margin-top: 30px;
+    margin-right: 70px;
+}
+
+.channel_title {
+    display: flex;
+    flex-direction: column;
+}
+
+.channel_author_img {
+    margin-right: 14px;
+}
+
+.channel_name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    color: #19202C;
+}
+
+.channel_subscribers_count {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+
+    color: #C2C2C2;
+}
+
+.channel_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.channel_header_buttons {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.channel_subscription_button {
+    margin: 0;
+}
+
 @media only screen and (max-width:1230px) {
     .container {
         height: 100%;
@@ -466,7 +524,7 @@ input[type=text]:focus {
 
     .content {
         height: calc(100% - 125px);
-        overflow: auto;
+        overflow: hidden;
     }
 
     .mobile_search_icon,
@@ -481,7 +539,8 @@ input[type=text]:focus {
         display: none;
     }
 
-    .sidebar, .recommended {
+    .sidebar,
+    .recommended {
         display: none;
     }
 
@@ -520,5 +579,9 @@ input[type=text]:focus {
     .video_preview_img {
         width: 288px;
         height: 150px;
+    }
+
+    .recommended_channel {
+        display: none;
     }
 }
