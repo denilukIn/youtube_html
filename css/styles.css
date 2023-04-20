@@ -127,7 +127,7 @@ input[type=text]:focus {
     overflow-y: hidden;
 }
 
-.sidebar:hover{
+.sidebar:hover {
     overflow-y: auto;
 }
 
@@ -515,6 +515,71 @@ input[type=text]:focus {
     margin: 0;
 }
 
+.channel_tabs_ul {
+    display: flex;
+    gap: 69px;
+    margin: 0;
+    padding: 0;
+}
+
+.channel_tab {
+    list-style: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.channel_tabs_div {
+    margin-top: 20px;
+}
+
+.channel_main_video_div {
+    margin-top: 54px;
+    display: flex;
+}
+
+.active_channel_tab {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-underline-offset: 3px;
+    color: #FF0000;
+}
+
+.channel_main_video_info {
+    margin-top: 17px;
+    margin-left: 37px;
+}
+
+.channel_main_video_title {
+    display: inline-block;
+    width: 431px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 34px;
+    color: #19202C;
+}
+
+.channel_main_video_description {
+    margin-top: 10px;
+    display: inline-block;
+    width: 548px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+
+    color: #000000;
+
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
+
+.channel_main_video_statistics {
+    display: inline-block;
+    margin-top: 33px;
+}
+
 @media only screen and (max-width:1230px) {
     .container {
         height: 100%;
@@ -556,7 +621,9 @@ input[type=text]:focus {
         display: flex;
     }
 
-    .authors_videos, .recommended_videos, .recommended_channel {
+    .authors_videos,
+    .recommended_videos,
+    .recommended_channel {
         flex-direction: column;
         padding-bottom: 20px;
         margin-top: 0;
@@ -594,13 +661,15 @@ input[type=text]:focus {
         margin-top: auto;
     }
 
-    .recommended_video, 
+    .recommended_video,
     .recommended_video_preview_div,
     .recommended_video_preview_img {
         width: 100%;
     }
 
-    .recommended_videos, .recommended_channel, .authors_videos {
+    .recommended_videos,
+    .recommended_channel,
+    .authors_videos {
         margin-top: 15px;
     }
 
@@ -616,8 +685,8 @@ input[type=text]:focus {
         height: 65px;
         width: 90px;
     }
-    
-    .video_additional_information, 
+
+    .video_additional_information,
     .author_name_preview,
     .video_duration_text {
         font-size: 115%;
