@@ -109,7 +109,8 @@ input[type=text]:focus {
     margin: 0 auto;
 }
 
-.mobile_search_icon {
+.mobile_search_icon,
+.mobile_channel_tabs_ul {
     display: none;
 }
 
@@ -532,11 +533,17 @@ input[type=text]:focus {
     margin: 0;
 }
 
-.channel_tabs_ul {
+.channel_tabs_ul,
+.mobile_channel_tabs_ul {
     display: flex;
     gap: 69px;
     margin: 0;
     padding: 0;
+}
+
+.mobile_search_icon,
+.mobile_channel_tabs_ul {
+    display: none;
 }
 
 .channel_tab {
@@ -670,7 +677,12 @@ input[type=text]:focus {
     .author_navigation,
     .recommended_arrows,
     .info_title,
-    .recommended_channel_navigation {
+    .recommended_channel_navigation,
+    .channel_tabs_ul,
+    .channel_main_video_div,
+    .channel_recommended_channels_div,
+    .author_video_arrows,
+    .channel_videos_author {
         display: none;
     }
 
@@ -704,6 +716,7 @@ input[type=text]:focus {
         width: auto;
         padding-left: 7px;
         padding-right: 7px;
+        padding-top: 0px;
     }
 
     .mobile_navbar_line {
@@ -730,7 +743,11 @@ input[type=text]:focus {
     }
 
     .recommended_video,
-    .recommended_video_preview_div,
+    /* .recommended_video_preview_div, */
+    .recommended_video_preview_img {
+        width: 98%;
+    }
+
     .recommended_video_preview_img {
         width: 100%;
     }
@@ -742,22 +759,22 @@ input[type=text]:focus {
     }
 
     .video_preview_title {
-        font-size: 140%;
+        /* font-size: 140%; */
     }
 
     .video_duration_layout {
-        height: 60%;
+        /* height: 60%; */
     }
 
     .video_duration {
-        height: 65px;
-        width: 90px;
+        height: 40px;
+        /* width: 90px; */
     }
 
     .video_additional_information,
     .author_name_preview,
     .video_duration_text {
-        font-size: 115%;
+        /* font-size: 115%; */
     }
 
     /* .recommended_channel {
@@ -766,6 +783,11 @@ input[type=text]:focus {
 
     .author_recommendation {
         height: auto;
+    }
+
+    .authors_videos {
+        padding-left: 9px;
+        /* padding-right: 16px; */
     }
 
     .authors_videos {
@@ -783,7 +805,7 @@ input[type=text]:focus {
         width: 100%;
         height: 100%;
     }
-    
+
     .channel_header {
         z-index: 2;
         flex-direction: column;
@@ -800,4 +822,55 @@ input[type=text]:focus {
     .channel_subscription_notification_div {
         display: none;
     }
+
+    .channel_header {
+        position: absolute;
+        top: 4%;
+        /* left: 40px; */
+    }
+
+    .channel_page_div {
+        position: relative;
+    }
+
+    .channel_content_and_recommendation_div {
+        margin-top: 165px;
+    }
+
+    /* .channel_tabs_ul {
+        margin-left: 16px;
+        gap:40px
+    } */
+
+    .mobile_channel_tabs_ul {
+        display: flex;
+        margin-left: 16px;
+        gap: 40px
+    }
+
+    .active_channel_tab {
+        text-underline-offset: 4px;
+    }
+
+    .channel_videos_list {
+        margin-top: 16px;
+    }
+
+    .recommended_channel_header, 
+    .recommended {
+        padding-left: 9px;
+    }
+
+    .recommended_video_duration {
+        margin-bottom: 0px;
+    }
+
+    .channel_videos_list {
+        height: auto;
+        padding-bottom: 8%;
+    }
+
+    /* .recommended {
+        width: 100%;
+    } */
 }
