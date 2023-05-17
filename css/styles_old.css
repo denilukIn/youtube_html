@@ -1,0 +1,300 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+    /* width: 100%; */
+    /* background-color: red; */
+}
+
+.tool_bar {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.menu_button {
+    display: flex;
+    height: 20px;
+    width: 17px;
+}
+
+.youtube_logo {
+    display: flex;
+    left: 4.17%;
+    right: 89.79%;
+    top: 2.5%;
+    bottom: 95.42%;
+}
+
+.search_field {
+    display: flex;
+    margin-left: 60px;
+    border: 0px;
+    width: 600px;
+    height: 27px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding-left: 1.5%;
+    background: #EBEBEB url('../img/Search_icon.png') no-repeat 96% center;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border: 0px solid #fbfcfb;
+}
+
+
+.icons_top {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.camera_icon {
+    display: flex;
+}
+
+.services_icon {
+    display: flex;
+
+    background: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.24;
+}
+
+.notifications_icon {
+    display: flex;
+}
+
+.notifications_icon {
+    margin-top: 1px;
+}
+
+.mobile_search_icon {
+    display: none;
+}
+
+.userpic {
+    display: flex;
+    /* left: 96.27%; */
+    /* right: 5.65%;
+    top: 1.83%;
+    bottom: 94.83%; */
+}
+
+
+.sidebar {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    width: 189px;
+    margin-top: 30px;
+}
+
+.mobile_navbar {
+    display: none;
+    padding-bottom: 4px;
+    flex-direction: column;
+}
+
+.mobile_navbar_tabs {
+    margin-top: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 40px;
+}
+
+.mobile_navbar_tab {
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.mobile_navbar_icon {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.mobile_tab_title {
+    font-family: 'Muli';
+    font-size: 10px;
+    line-height: 13px;
+    color: #898989;
+}
+
+.tab {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 33px;
+    align-items: center;
+    gap: 13px;
+}
+
+.tabs,
+.subscriptions {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending_tab {
+    gap: 17px;
+}
+
+.subscription_tab,
+.watch_later_tab {
+    gap: 14.19px;
+}
+
+.tab_name {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #898989;
+}
+
+.active_tab {
+    color: #FF0000;
+}
+
+
+.subscriptions_title {
+    padding-left: 30px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+}
+
+.settings {
+    margin-top: 76px;
+}
+
+.content {
+    display: flex;
+}
+
+
+.feed {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 90px;
+    width: 100%;
+}
+
+.channel_info {
+    display: flex;
+    gap: 20px;
+}
+
+.author_navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.author_recomendation {
+    width: 100%;
+    height: 255px;
+}
+
+.authors_videos {
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+}
+
+.channel_icon {
+    height: 50px;
+}
+
+.author_video_arrows {
+    padding-right: 118px;
+    margin-top: auto;
+}
+
+.video {
+    width: 250px;
+}
+
+.video_preivew_div {
+    position: relative;
+    height: 150px;
+    width: 250px;
+}
+
+.video_duration {
+    display: flex;
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    background-image: url('../img/duration_layout.png');
+    height: 24px;
+    width: 47px;
+    justify-content: center;
+    align-items: center;
+}
+
+.video_duration_text {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+.video_preview_title {
+    margin-top: 10px;
+    font-family: 'Muli';
+    font-size: 16px;
+    line-height: 20px;
+
+
+    color: #19202C;
+}
+
+.video_additional_information {
+    font-family: 'Muli';
+    font-size: 13px;
+    line-height: 16px;
+    color: #C2C2C2;
+}
+
+
+.author_name_preview {
+    font-family: 'Muli';
+    font-size: 13px;
+    line-height: 16px;
+    text-align: right;
+
+    color: #C2C2C2;
+}
+
+.video_previe_bottom {
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.video_preview_img {
+    width: 250px;
+    height: 150px;
+}
