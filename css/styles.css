@@ -655,6 +655,61 @@ input[type=text]:focus {
     gap: 20px;
 }
 
+.video_player_img {
+    width: 1363px;
+    height: 700px;
+}
+
+.video_content_div {
+    padding-left: 80px;
+}
+
+.video_content_div, .recommendation_div {
+    padding-top: 10px;
+}
+
+.recommendation_div {
+    background-color: #db0b0b;
+    height: 30px;
+    width: 300px;
+}
+
+.video_player_div {
+    position: relative;
+}
+
+.player_control {
+    position: relative;
+    bottom: 100px;
+    margin-left: 33px;
+    margin-right: 33px;
+}
+
+.player_buttons {
+    display: flex;
+}
+
+.player_buttons {
+    margin-top: 21px;
+    justify-content: space-between;
+}
+
+.left_buttons {
+    display: flex;
+}
+
+.play_pause_buttons {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.player_settings {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
 @media only screen and (max-width:1230px) {
     .container {
         height: 100%;
@@ -873,4 +928,6 @@ input[type=text]:focus {
     /* .recommended {
         width: 100%;
     } */
+
+
 }
