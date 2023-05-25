@@ -660,55 +660,216 @@ input[type=text]:focus {
     height: 700px;
 }
 
-.video_content_div {
-    padding-left: 80px;
-}
-
-.video_content_div, .recommendation_div {
-    padding-top: 10px;
-}
-
 .recommendation_div {
-    background-color: #db0b0b;
-    height: 30px;
-    width: 300px;
+    width: 100%;
 }
 
-.video_player_div {
-    position: relative;
+.video_player_page {
+    padding-left: 80px;
+    padding-right: 70px;
 }
 
-.player_control {
-    position: relative;
-    bottom: 100px;
-    margin-left: 33px;
-    margin-right: 33px;
+.youtube_video {
+    width: 1363px;
+    height: 700px;
 }
 
-.player_buttons {
+.video_navigation {
     display: flex;
+    gap: 45px;
 }
 
-.player_buttons {
-    margin-top: 21px;
+.video_navbar_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.video_title {
+    margin-bottom: 14px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+
+    color: #192646;
+}
+
+.video_information {
+    margin-top: 20px;
+}
+
+.video_views {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height */
+
+
+    color: #C2C2C2;
+}
+
+hr {
+    height: 1px;
+    background-color: rgba(216, 216, 216, 0.5);
+    border: none;
+}
+
+.video_content_div {
+    margin-right: 40px;
+}
+
+.next_title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+
+    color: #19202C;
+}
+
+.autoplay_title {
+    margin-right: 11px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #19202C;
+}
+
+.recommendation_videos {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap:30px
+}
+
+.recommendation_video_preview_img {
+    width: 100%;
+}
+
+.recommendation_video_preview_div {
+    position: relative;
+}
+
+.recommendation_video_duration_layout {
+    display: flex;
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    height: 24px;
+    width: 47px;
+    justify-content: center;
+    align-items: center;
+}
+
+.recommendation_video_duration {
+    display: flex;
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    height: 24px;
+    width: 47px;
+    justify-content: center;
+    align-items: center;
+}
+
+.recommendation_video_duration_text {
+    position: absolute;
+    top: 18%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 28px;
+    margin-bottom: -2px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #EBEBEB;;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider.round:before {
+    background-color: #2196F3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+  }
+  
+  /* Rounded slider */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* end slider */
+
+.recommendation_header {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-.left_buttons {
+.autoplay_div {
     display: flex;
+    align-items: end;
 }
 
-.play_pause_buttons {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-.player_settings {
-    display: flex;
-    gap: 28px;
-    align-items: center;
-}
 
 @media only screen and (max-width:1230px) {
     .container {
@@ -911,7 +1072,7 @@ input[type=text]:focus {
         margin-top: 16px;
     }
 
-    .recommended_channel_header, 
+    .recommended_channel_header,
     .recommended {
         padding-left: 9px;
     }
