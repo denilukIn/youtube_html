@@ -667,6 +667,8 @@ input[type=text]:focus {
 .video_player_page {
     padding-left: 80px;
     padding-right: 70px;
+    height: calc(100%-72px);
+    overflow: auto;
 }
 
 .youtube_video {
@@ -839,7 +841,7 @@ hr {
   }
 
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    /* box-shadow: 0 0 1px #2196F3; */
   }
   
   input:checked + .slider:before {
@@ -868,6 +870,61 @@ hr {
 .autoplay_div {
     display: flex;
     align-items: end;
+}
+
+.video_author_and_description_div {
+    display: flex;
+    margin-top: 35px;
+}
+
+.video_subscription_and_description {
+    margin-left: 12px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.video_channel_title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 33px;
+    /* identical to box height */
+
+
+    color: #19202C;
+}
+
+.video_publish_date {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+
+    color: #C2C2C2;
+}
+
+.container {
+    height: 100%;
+    overflow: auto;
+}
+
+.channel_info_and_subscription {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.player_video_description {
+    width: 820px;
+    margin-bottom: 15px;
+}
+
+.player_show_more {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height */
+
+
+    color: #C2C2C2;
 }
 
 
